@@ -1,1 +1,1 @@
-alert('não faça isso');
+//alert('não faça isso');
