@@ -1,0 +1,17 @@
+body {
+    background-color:cornflowerblue;
+}
+
+h2, p, em {
+    font-size: 15px;
+}
+p {
+    /*font-family: "Verdana";*/
+    /*font-family: 'Verdana';*/
+    font-family: Verdana;
+}
+
+h2 {
+    border: 1px SOLID RED;
+    border-radius: 5px;
+}
