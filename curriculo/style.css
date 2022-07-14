@@ -14,3 +14,35 @@ h2 {
     font-size: 1.5em;
     padding-bottom: 1em;
 }
+main {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    margin-top: 3em;
+    /*column-gap: 2em;*/
+}
+header {
+    text-align: center;
+    margin: auto 2em;
+}
+section {
+    margin: auto 1em 4em 2em;
+}
+i {
+    margin-right: .5em;
+}
+p {
+    margin: .2em auto;
+    text-align: justify;
+}
+hr {
+    border: none;
+    background-color: lightgray;
+    height: 1px;
+}
+h1, h2 {
+    font-weight: 100;
+    margin-bottom: 0;
+}
+#mainLeft {
+    border-right: 1px solid lightgray;
+}
