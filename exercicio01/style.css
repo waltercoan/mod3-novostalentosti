@@ -10,19 +10,24 @@ body {
 }
 .topo {
     border: solid 3px orangered;
+    grid-area: topo;
 }
 .imagem {
     border: solid 3px green;
     height: 200px; /*será removido no futuro*/
+    grid-area: imagem;
 }
 .texto {
     border: solid 3px blue;
     height: 200px; /*será removido no futuro*/
+    grid-area: texto;
 }
 .video {
     border: solid 3px purple;
     height: 200px; /*será removido no futuro*/
+    grid-area: video;
 }
 .rodape {
     border: solid 3px black;
+    grid-area: rodape;
 }
