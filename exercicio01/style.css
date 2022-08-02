@@ -6,7 +6,15 @@ body {
 }
 .container {
     border: solid 3px red;
-    height: 100vw;
+    /*height: 100vw;*/
+    display: grid;
+    grid-template: 
+        'topo topo'
+        'imagem imagem'
+        'texto video'
+        'rodape rodape';
+    grid-gap: 20px;
+    padding: 20px;
 }
 .topo {
     border: solid 3px orangered;
