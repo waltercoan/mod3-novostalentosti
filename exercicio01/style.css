@@ -19,3 +19,10 @@ body {
     border: solid 3px blue;
     height: 200px; /*será removido no futuro*/
 }
+.video {
+    border: solid 3px purple;
+    height: 200px; /*será removido no futuro*/
+}
+.rodape {
+    border: solid 3px black;
+}
