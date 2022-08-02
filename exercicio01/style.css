@@ -11,3 +11,11 @@ body {
 .topo {
     border: solid 3px orangered;
 }
+.imagem {
+    border: solid 3px green;
+    height: 200px; /*será removido no futuro*/
+}
+.texto {
+    border: solid 3px blue;
+    height: 200px; /*será removido no futuro*/
+}
