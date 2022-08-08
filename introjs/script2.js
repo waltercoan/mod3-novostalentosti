@@ -38,3 +38,11 @@ a.idade = 20;
 a.nome = "zezinho";
 console.log(a + " " + typeof(a));
 console.log(JSON.stringify(a));
+
+function minhaFuncao(umnumero){
+    console.log(umnumero);
+    console.log("Fui clicado...");
+    let caixinha = document.getElementById("valor");
+    //caixinha.value += umnumero;
+    caixinha.value = "2+2=" + eval("2+2");
+}
