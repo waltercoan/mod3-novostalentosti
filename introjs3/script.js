@@ -7,8 +7,12 @@ function infinity() {
 
 function infinity2(){
     let i = 0;
-    setInterval(function(){
+    //setInterval(function(){
+    //CALLBACK
+    //JS executa func daqui a 1 segundo
+    setTimeout(function(){
         console.log(i++);
+        return i;
     }, 1000);
 }
 
@@ -21,4 +25,6 @@ function fazqqcoisa(){
     console.log("qq coisa");
 }
 //infinity(); cuidado
+let resultado = infinity2();
+console.log("Result " + resultado);
 date();
