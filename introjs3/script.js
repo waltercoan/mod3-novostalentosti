@@ -14,6 +14,7 @@ function infinity2(){
         console.log(i++);
         return i;
     }, 1000);
+    console.log("FIM DO INFINITY2");
 }
 
 function date(){
