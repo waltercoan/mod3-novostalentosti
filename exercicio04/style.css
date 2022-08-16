@@ -1,7 +1,45 @@
 body {
     /*background-color: blueviolet;*/
     /*Site GRADIENTE https://cssgradient.io/*/
-    /*background: rgb(131,58,180);
-    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);*/
+    /*background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 24%, rgba(0,212,255,1) 100%);*/
     /*background-image: url('./img/tijolo.jpg');*/
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 30px;
+    grid-template-areas: 
+    'titulo busca'
+    'menu produto';
+}
+.titulo {
+    grid-area: titulo;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /*background-color: cadetblue;*/
+    border: solid 3px black;
+    height: 100px;
+}
+.busca {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    grid-area: busca;
+    /*background-color: aqua;*/
+    border: solid 3px black;
+    height: 100px;
+}
+.menu {
+    grid-area: menu;
+    /*background-color: black;*/
+    border: solid 3px black;
+    height: 100px;
+}
+.produto {
+    grid-area: produto;
+    /*background-color:chartreuse;*/
+    border: solid 3px black;
+    height: 100px;
 }
