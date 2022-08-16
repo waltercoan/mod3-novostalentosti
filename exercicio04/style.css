@@ -41,5 +41,26 @@ body {
     grid-area: produto;
     /*background-color:chartreuse;*/
     border: solid 3px black;
-    height: 100px;
+    /*height: 100px;*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.umproduto{
+    /*height: 80px;*/
+    border: solid 3px chartreuse;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+img {
+    width: 90%;
+}
+li {
+    margin: 20px 0px 20px;
+}
+ul {
+    list-style: none;
 }
