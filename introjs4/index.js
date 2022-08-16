@@ -17,7 +17,7 @@ app.get("/infinity", function(req,res){
     while(i < 50000){
         console.log(i++);
     }
-})
+});
 
 
 
