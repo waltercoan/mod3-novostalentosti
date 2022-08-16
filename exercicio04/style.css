@@ -20,7 +20,7 @@ body {
     align-items: center;
     /*background-color: cadetblue;*/
     border: solid 3px black;
-    height: 100px;
+    /*height: 100px;*/
 }
 .busca {
     display: flex;
@@ -29,13 +29,13 @@ body {
     grid-area: busca;
     /*background-color: aqua;*/
     border: solid 3px black;
-    height: 100px;
+    /*height: 100px;*/
 }
 .menu {
     grid-area: menu;
     /*background-color: black;*/
     border: solid 3px black;
-    height: 100px;
+    /*height: 100px;*/
 }
 .produto {
     grid-area: produto;
