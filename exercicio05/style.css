@@ -12,6 +12,7 @@ ul li {
 .topo {
     grid-area: topo;
     display: flex;
+    align-items: center;
 }
 .centro {
     grid-area: centro;
