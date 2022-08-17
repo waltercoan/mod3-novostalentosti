@@ -20,10 +20,20 @@
         itens.innerHTML = "";
         for(let i in lista){
             let umItem = lista[i];
+
+            let botao = document.createElement("button");
+            botao.appendChild(document.createTextNode("Excluir"));
+            botao.setAttribute("data-id",i);
+            botao.onclick = excluir;
+
             let li = document.createElement("li");
             li.appendChild(document.createTextNode(umItem));
             itens.appendChild(li);
+            li.appendChild(botao);
         }
+    }
+    function excluir(){
+        console.log("clicou");
     }
 
 })();
