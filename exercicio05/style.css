@@ -1,0 +1,32 @@
+.box {
+    height: 100px;
+    border: solid 3px black;
+}
+ul {
+    list-style-type: none;
+}
+ul li {
+    float:left;
+    margin: 0px 20px 0px;
+}
+.topo {
+    grid-area: topo;
+    display: flex;
+}
+.centro {
+    grid-area: centro;
+}
+.esquerda {
+    grid-area: esquerda;
+}
+.direita {
+    grid-area: direita;
+}
+.container{
+    display: grid;
+    /*grid-template-columns: 1fr 2fr;*/
+    grid-template-areas: 
+        'topo topo topo'
+        'centro centro centro'
+        'esquerda direita direita';
+}
