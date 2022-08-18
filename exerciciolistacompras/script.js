@@ -39,8 +39,12 @@
             li.appendChild(botao);
         }
     }
-    function excluir(){
-        console.log("clicou");
+    
+    function excluir(e){
+        //console.log(e.target.getAttribute("data-id"));
+        let posicao = e.target.getAttribute("data-id");
+        lista.splice(posicao,1);
+        atualiza_itens();
     }
 
 })();
