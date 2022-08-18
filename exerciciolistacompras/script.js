@@ -3,6 +3,7 @@
     let btninserir = document.getElementById("btninserir");
     let txtproduto = document.getElementById("txtproduto");
     let itens = document.getElementById("itens");
+    let txtqtd = document.getElementById("txtqtd");
 
     let lista = [];
     btninserir.onclick = click_btninserir;
@@ -10,16 +11,20 @@
 
     function tecla_enter(key){
         if(key.key === 'Enter'){
-            adiciona(txtproduto.value);    
+            adiciona(txtproduto.value, txtqtd.value);    
         }
     }
     function click_btninserir(){
         //alert("clicou...");
-        adiciona(txtproduto.value);
+        adiciona(txtproduto.value, txtqtd.value);
         
     }
-    function adiciona(produto){
-        lista.push(produto);
+    function adiciona(produto, qtd){
+        //lista.push(produto);
+        lista.push({
+            nome: produto,
+            qtd: qtd
+        });
         atualiza_itens();
     }
 
@@ -34,7 +39,9 @@
             botao.onclick = excluir;
 
             let li = document.createElement("li");
-            li.appendChild(document.createTextNode(umItem));
+            let textobonito = `Prod: ${umItem.nome} - QTD: ${umItem.qtd}`;
+            //li.appendChild(document.createTextNode(umItem));
+            li.appendChild(document.createTextNode(textobonito));
             itens.appendChild(li);
             li.appendChild(botao);
         }
