@@ -39,8 +39,8 @@
             botao.onclick = excluir;
 
             let li = document.createElement("li");
-            let textobonito = `Prod: ${umItem.nome} - QTD: ${umItem.qtd}`;
             //li.appendChild(document.createTextNode(umItem));
+            let textobonito = `Prod: ${umItem.nome} - QTD: ${umItem.qtd}`;
             li.appendChild(document.createTextNode(textobonito));
             itens.appendChild(li);
             li.appendChild(botao);
