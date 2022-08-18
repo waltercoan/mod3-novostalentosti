@@ -6,10 +6,17 @@
 
     let lista = [];
     btninserir.onclick = click_btninserir;
-   
+    txtproduto.onkeydown = tecla_enter;
+
+    function tecla_enter(key){
+        if(key.key === 'Enter'){
+            adiciona(txtproduto.value);    
+        }
+    }
     function click_btninserir(){
         //alert("clicou...");
         adiciona(txtproduto.value);
+        
     }
     function adiciona(produto){
         lista.push(produto);
