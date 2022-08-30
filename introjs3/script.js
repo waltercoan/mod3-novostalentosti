@@ -7,10 +7,10 @@ function infinity() {
 
 function infinity2(){
     let i = 0;
-    setInterval(function(){ //Define intervalo de execução repetido
+    //setInterval(function(){ //Define intervalo de execução repetido
     //CALLBACK
     //JS executa func daqui a 1 segundo
-    //setTimeout(function(){ // Define um tempo unico de execução
+    setTimeout(function(){ // Define um tempo unico de execução
         console.log(i++);
         return i;
     }, 1000); //unidade de milisegundos
