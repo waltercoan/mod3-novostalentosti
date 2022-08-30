@@ -7,5 +7,8 @@ function sum (a,b){
 }
 
 sum(2,2).then((result) => {
-    console.log(result);
+    //console.log(result);
+    return result;
+}).then((result2)=>{
+    console.log(result2);
 });
