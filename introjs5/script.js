@@ -10,6 +10,7 @@ function date(){
 }
 
 const infgen = infinity();
+console.log(typeof(infgen));
 infgen.next();
 date();
 infgen.next();
