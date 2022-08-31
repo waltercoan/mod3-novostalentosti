@@ -14,3 +14,22 @@ Mapeia cada elemento da lista, passando por uma função que pode alterar o valo
 ```javascript
 let novalista = lista3.map((item) => (item ==='🥛'?'🥤':item))
 ```
+
+## REDUCE
+Realiza a redução dos elementos de um array para um único valor, a partir de uma função que recebe dois parâmetros (acumulador, item)
+```javascript
+let novalista = lista3.map((item) => (item ==='☕'?1:0));
+let total = novalista.reduce((soma, item) => soma + item);
+console.log(total);
+```
+
+## ARROW FUNCTION
+Função Javascript, escrita em uma única linha (normalmente) para representar uma lógica simples.
+```javascript
+parametro => expressão
+(parametro) => expressão
+(param1, param2) => expressão
+(param1, param2) => {
+    return valor
+}
+```
