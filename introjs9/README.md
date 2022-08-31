@@ -33,3 +33,17 @@ parametro => expressão
     return valor
 }
 ```
+
+## FILTER
+Função que filtra os elementos a partir de uma outra função que deve retornar verdadeiro ou falso.
+```javascript
+let novaLista = lista3.filter((item) => item === '☕');
+console.log(novaLista);
+```
+
+## FIND
+Procura pelo primeiro elemento que a função de busca retornar verdadeiro.
+```javascript
+let resultado = lista3.find((item) => item === '☕');
+console.log(resultado);
+```
