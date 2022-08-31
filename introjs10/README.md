@@ -33,3 +33,17 @@ listavaloresunicos.add('🐶');
 listavaloresunicos.add('🐸');
 console.log(listavaloresunicos);
 ```
+
+## Parâmetros padrão (Defaul Parameters)
+Definir valores padrão para parâmetros de entrada
+```javascript
+function soma(x = 1, y = 2){
+    return x + y;
+}
+console.log(soma()); //x = 1, y = 2
+console.log(soma(3)); //x = 3, y = 2
+console.log(soma(3,5)); //x = 3, y = 5
+
+let soma2 = (x=1 , y=2) => x + y
+console.log(soma2());
+```
