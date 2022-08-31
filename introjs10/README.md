@@ -47,3 +47,38 @@ console.log(soma(3,5)); //x = 3, y = 5
 let soma2 = (x=1 , y=2) => x + y
 console.log(soma2());
 ```
+
+## Rest Parameters
+Define uma coleção não limitada de valores por parâmetro.
+```javascript
+function minhafuncao(...valores){
+    console.log(valores);
+}
+minhafuncao();
+minhafuncao(1);
+minhafuncao(1,2);
+```
+
+## Desconstruir uma lista
+Retirar cada elemento da lista e atribuir a variáveis diferentes
+```javascript
+const lista =['🐶','🐊','🐸','🐧'];
+let a, b, c, d;
+[a,b,c,d] = lista; //desconstrutor
+console.log(a);
+console.log(b);
+console.log(c);
+console.log(d);
+```
+
+## Espalhar valores (SPREAD Operator)
+Distribui os valores da lista para cada parâmetro de entrada
+```javascript
+function minhafunc(a,b,c,d){
+    console.log(a);
+    console.log(b);
+    console.log(c);
+    console.log(d);    
+}
+minhafunc(...lista); //SPREAD Operator
+```
