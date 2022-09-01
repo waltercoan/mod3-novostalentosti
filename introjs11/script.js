@@ -1,12 +1,13 @@
 (function (){
     let botao = document.getElementById("botao");
+    let cep = document.getElementById("cep");
     /*const result = 
         await fetch("https://ws.apicep.com/cep/06233-030.json");
     console.log(result);*/
 
     botao.onclick = function() {
 
-        fetch("https://ws.apicep.com/cep/06233-030.json")
+        fetch(`https://ws.apicep.com/cep/${cep.value}.json`)
         .then(function(response){ //callback
             //console.log(response);
             response.json().then(function(json){
