@@ -8,8 +8,22 @@ let pessoa = {
     },
     telefones: [
         "555-1234","999999999"
-    ]
+    ],
+    geraEndereco: function(){
+        return `${this.cidade.nome} - ${this.telefones[0]}`;
+    },
+    somaIdade: function(valorAdicional){
+        return this.idade + valorAdicional;
+    }
+
 };
+
+console.log(pessoa.geraEndereco());
+console.log(pessoa.somaIdade(20));
+console.log(pessoa.geraEndereco);
+
+
+
 
 console.log(typeof(pessoa));
 console.log(pessoa);

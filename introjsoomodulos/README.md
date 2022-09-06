@@ -40,3 +40,44 @@ console.log(objjs);
 ```
 JSON.parse transforma um dado JSON texto para um objeto Javascript
 
+```javascript
+let pessoa = {
+    nome: "Zezinho",
+    idade: 22,
+    reservista: true,
+    cidade: {
+        nome: "Joinville",
+        estado: "Santa Catarina"
+    },
+    telefones: [
+        "555-1234","999999999"
+    ]
+};
+```
+Dentro de um objeto pode haver outro objeto (cidade), ou uma lista de elementos ou objetos
+
+```javascript
+let pessoa = {
+    nome: "Zezinho",
+    idade: 22,
+    reservista: true,
+    cidade: {
+        nome: "Joinville",
+        estado: "Santa Catarina"
+    },
+    telefones: [
+        "555-1234","999999999"
+    ],
+    geraEndereco: function(){
+        return `${this.cidade.nome} - ${this.telefones[0]}`;
+    },
+    somaIdade: function(valorAdicional){
+        return this.idade + valorAdicional;
+    }
+
+};
+
+console.log(pessoa.geraEndereco());
+console.log(pessoa.somaIdade(20));
+```
+Métodos são considerados propriedades que tem a referencia para uma função. Devem utilizar a palavra THIS para acessar as propriedades da instância do objeto.
