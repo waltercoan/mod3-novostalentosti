@@ -1,5 +1,5 @@
 //export class Pessoa {
-class Pessoa {
+export default class Pessoa {
     constructor(nome, idade){
         this.nome = nome;
         this.idade = idade;
@@ -11,8 +11,8 @@ class Cidade {
         this.nome = nome;
     }
 }
-
+/*
 export {
     Pessoa,
     Cidade
-}
+}*/

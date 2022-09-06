@@ -209,3 +209,18 @@ export {
     Cidade
 }
 ```
+
+Export DEFAULT - quando eu não tenho controle sobre o import
+```javascript
+export default class Pessoa {
+    constructor(nome, idade){
+        this.nome = nome;
+        this.idade = idade;
+    }
+}
+```
+
+```javascript
+import qqcoisa from "./pessoa.js";
+let umaPessoa = new qqcoisa("Zezinho",22);
+```
