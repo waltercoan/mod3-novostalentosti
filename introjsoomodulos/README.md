@@ -77,7 +77,43 @@ let pessoa = {
 
 };
 
+
 console.log(pessoa.geraEndereco());
 console.log(pessoa.somaIdade(20));
 ```
 Métodos são considerados propriedades que tem a referencia para uma função. Devem utilizar a palavra THIS para acessar as propriedades da instância do objeto.
+
+```javascript
+let pessoa = {
+    nome: "Zezinho",
+    idade: 22,
+    reservista: true,
+    cidade: {
+        nome: "Joinville",
+        estado: "Santa Catarina"
+    },
+    telefones: [
+        "555-1234","999999999"
+    ],
+    geraEndereco: function(){
+        let todosOsTel = "";
+        for(let umTelefone of this.telefones){
+            todosOsTel += umTelefone;
+        }
+        return `${this.cidade.nome} - ${todosOsTel}`;
+    },
+    somaIdade: function(valorAdicional){
+        return this.idade + valorAdicional;
+    },
+    get nomeCompleto() {
+        return this.nome;
+    },
+    set nomeCompleto(nome){
+        this.nome = nome;
+    }
+
+};
+pessoa.nomeCompleto = "Zezinho Sauro";
+console.log(pessoa.nomeCompleto);
+```
+As palavras reservadas get e set podem ser utilizadas para criação de propriedades que dão acesso a atributos do objeto

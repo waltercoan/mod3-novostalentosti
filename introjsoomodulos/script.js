@@ -10,13 +10,25 @@ let pessoa = {
         "555-1234","999999999"
     ],
     geraEndereco: function(){
-        return `${this.cidade.nome} - ${this.telefones[0]}`;
+        let todosOsTel = "";
+        for(let umTelefone of this.telefones){
+            todosOsTel += umTelefone + " ";
+        }
+        return `${this.cidade.nome} - ${todosOsTel}`;
     },
     somaIdade: function(valorAdicional){
         return this.idade + valorAdicional;
+    },
+    get nomeCompleto() {
+        return this.nome;
+    },
+    set nomeCompleto(nome){
+        this.nome = nome;
     }
 
 };
+pessoa.nomeCompleto = "Zezinho Sauro";
+console.log(pessoa.nomeCompleto);
 
 console.log(pessoa.geraEndereco());
 console.log(pessoa.somaIdade(20));
