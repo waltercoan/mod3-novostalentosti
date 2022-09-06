@@ -136,3 +136,31 @@ console.log(umaPessoa.nome);
 console.log(umaPessoa.gerarIdentidade());
 ```
 A palavra chave class, define uma classe que é utilizada como template para criação de novos objetos. Não é possível (ainda) criar atributos dentro do escopo da classe, todos os atributos devem ser definidos dentro do construtor. E utilizar a palavra reservada new para instanciar o objeto a partir da classe.
+
+```javascript
+class PessoaJuridica extends Pessoa {
+    constructor(cnpj){
+        super();
+        this.CNPJ = cnpj;
+    }
+}
+```
+A palavra reservada extends permite o uso da herança em Javascript. Funcionamento similar ao Java, exigindo a chamada do construtor da classe PAI através da chamada do método super();
+
+
+## Módulos
+Exemplo simples de exportação de um módulo e importação em outro arquivo
+### Arquivo pessoa.js
+```javascript
+export class Pessoa {
+    constructor(nome, idade){
+        this.nome = nome;
+        this.idade = idade;
+    }
+}
+```
+### Arquivo script3.js
+```javascript
+import {Pessoa} from "./pessoa.js";
+let umaPessoa = new Pessoa("Zezinho",22);
+```
