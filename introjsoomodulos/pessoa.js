@@ -1,12 +1,18 @@
-export class Pessoa {
+//export class Pessoa {
+class Pessoa {
     constructor(nome, idade){
         this.nome = nome;
         this.idade = idade;
     }
 }
-
-export class Cidade {
+//export class Cidade {
+class Cidade {
     constructor(nome){
         this.nome = nome;
     }
+}
+
+export {
+    Pessoa,
+    Cidade
 }

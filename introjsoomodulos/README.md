@@ -188,3 +188,24 @@ export class Cidade {
 ```javascript
 import {Pessoa, Cidade} from "./pessoa.js";
 ```
+
+Exemplo de export no final do arquivo
+```javascript
+//export class Pessoa {
+class Pessoa {
+    constructor(nome, idade){
+        this.nome = nome;
+        this.idade = idade;
+    }
+}
+//export class Cidade {
+class Cidade {
+    constructor(nome){
+        this.nome = nome;
+    }
+}
+export {
+    Pessoa,
+    Cidade
+}
+```
