@@ -149,6 +149,11 @@ A palavra reservada extends permite o uso da herança em Javascript. Funcionamen
 
 
 ## Módulos
+
+IMPORTANTE: precisa colocar o type="module" no html.
+```html
+<script type="module" src="script3.js"></script>  
+```
 Exemplo simples de exportação de um módulo e importação em outro arquivo
 ### Arquivo pessoa.js
 ```javascript
@@ -163,4 +168,23 @@ export class Pessoa {
 ```javascript
 import {Pessoa} from "./pessoa.js";
 let umaPessoa = new Pessoa("Zezinho",22);
+```
+
+Exportar duas classes e importar em outro arquivo
+```javascript
+export class Pessoa {
+    constructor(nome, idade){
+        this.nome = nome;
+        this.idade = idade;
+    }
+}
+export class Cidade {
+    constructor(nome){
+        this.nome = nome;
+    }
+}
+```
+
+```javascript
+import {Pessoa, Cidade} from "./pessoa.js";
 ```
