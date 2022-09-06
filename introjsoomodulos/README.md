@@ -117,3 +117,22 @@ pessoa.nomeCompleto = "Zezinho Sauro";
 console.log(pessoa.nomeCompleto);
 ```
 As palavras reservadas get e set podem ser utilizadas para criação de propriedades que dão acesso a atributos do objeto
+
+
+```javascript
+class Pessoa{
+    constructor(){
+        this.nome;
+        this.idade = 0;
+    }
+    gerarIdentidade(){
+        return `${this.nome} - ${this.idade}`;
+    }
+}
+
+let umaPessoa = new Pessoa();
+umaPessoa.nome = "Zezinho";
+console.log(umaPessoa.nome);
+console.log(umaPessoa.gerarIdentidade());
+```
+A palavra chave class, define uma classe que é utilizada como template para criação de novos objetos. Não é possível (ainda) criar atributos dentro do escopo da classe, todos os atributos devem ser definidos dentro do construtor. E utilizar a palavra reservada new para instanciar o objeto a partir da classe.
