@@ -9,6 +9,11 @@ Objetivo: Aplicação monolítica WEB desenvolvida em NodeJS
  - Criar uma pasta com o nome do projeto
  - Executamos o comando: npm init
  - Instalou a dependencia do Express: npm i express --save
+ - Instalou dependencias do express-handlebars
+    npm i express-handlebars --save
+    npm i bootstrap --save
+    npm i body-parser --save
+    npm i jquery --save
 
 ## Como executar
  - Abrir um terminal
