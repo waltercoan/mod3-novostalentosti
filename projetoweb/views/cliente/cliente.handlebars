@@ -12,13 +12,15 @@
         </tr>
     </thead>
     <tbody>
+        {{#each listaclientes}}
         <tr>
-            <td>9999</td>
-            <td>AAAAAA</td>
-            <td>BBBBBB</td>
-            <td>CCCCCC</td>
-            <td>555555</td>
+            <td>{{this.id}}</td>
+            <td>{{this.nome}}</td>
+            <td>{{this.endereco}}</td>
+            <td>{{this.sexo}}</td>
+            <td>{{this.telefone}}</td>
             <td></td>
         </tr>
+        {{/each}}
     </tbody>
 </table>

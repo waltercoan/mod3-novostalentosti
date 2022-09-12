@@ -36,7 +36,7 @@ app.get("/", function(req,res){
 });
 
 app.get("/clientes", function(req,res){
-    res.render('cliente/cliente');
+    res.render('cliente/cliente',{listaclientes: fakeData});
 });
 
 app.listen(3000, () =>{ //CALLBACK
