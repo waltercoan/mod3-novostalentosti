@@ -4,6 +4,10 @@ Objetivo: Aplicação monolítica WEB desenvolvida em NodeJS
 ## Tecnologias
  - NodeJS - runtime JavaScript
  - Express - framework de desenvolvimento WEB
+    - Handlebars - engine de templates e renderização da aplicação
+ - HTML + CSS + JS
+ - Bootstrap
+ - JQuery
 
 ## Como foi criado
  - Criar uma pasta com o nome do projeto
