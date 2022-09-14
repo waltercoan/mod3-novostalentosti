@@ -21,7 +21,10 @@
             <td>{{this.endereco}}</td>
             <td>{{this.sexo}}</td>
             <td>{{this.telefone}}</td>
-            <td></td>
+            <td>
+                <a href="/clientes/alterar/{{this.id}}" 
+                    class="btn btn-warning">Alterar</a>
+            </td>
         </tr>
         {{/each}}
     </tbody>

@@ -50,6 +50,11 @@ app.post("/clientes/save", function(req,res){
     // Criando um novo objeto JS com o atributo nome
     //Math.max()
 
+    if(req.body.nome === ""){
+        res.redirect("/clientes");
+        return;
+    }
+
     let maiorid = Math.max(...fakeData.map( o => o.id ));
     if (maiorid == -Infinity) maiorid = 0;
     /*
