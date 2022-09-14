@@ -1,6 +1,10 @@
 <h3>Cliente</h3>
 <hr>
 <form action="/clientes/save" method="POST">
+
+    <input type="hidden" name="id" 
+    value="{{cliente.id}}">
+
     <div class="form-group">
         <label for="txtnome">Nome:</label>
         <input type="text" name="nome"
