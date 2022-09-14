@@ -24,8 +24,28 @@
             <td>
                 <a href="/clientes/alterar/{{this.id}}" 
                     class="btn btn-warning">Alterar</a>
+                <button class="btn btn-danger">Excluir</button>
             </td>
         </tr>
         {{/each}}
     </tbody>
 </table>
+
+
+<div class="modal" tabindex="-1" id="meumodal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Excluir Cliente</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Confirma a exclusão do cliente?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="btnsim">SIM</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="btncancelar">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
