@@ -37,6 +37,16 @@ app.get("/", function(req,res){
     res.render('index');
 });
 
+app.get("/clientes/delete/:id", function(req,res){
+    let umcliente = fakeData.find(o => o.id == req.params["id"]);
+    let posicao = fakeData.indexOf(umcliente);
+    if(posicao > -1){
+        fakeData.splice(posicao,1); //remove um elemento da lista na posicao informada
+    }
+    res.redirect("/clientes");
+});
+
+
 app.get("/clientes", function(req,res){
     res.render('cliente/cliente',{listaclientes: fakeData});
 });
