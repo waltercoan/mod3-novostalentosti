@@ -3,7 +3,7 @@
     //let reftabela = document.getElementById("clientes");
     $("#clientes").on("click",".js-delete", function(){
         let botaoClicado = $(this);
-        alert(botaoClicado.attr("data-id"));
-
+        $("btnsim").attr("data-id", botaoClicado.attr("data-id"));
+        $("#meumodal").modal("show");
     });
 })();
