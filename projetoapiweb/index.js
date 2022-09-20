@@ -25,7 +25,16 @@ app.get("/api/v1/clientes", (req,res) =>{
 });
 
 app.get("/api/v1/clientes/:id", (req,res)=>{
-    console.log(req.params.id);
+    //BUSCAR O CLIENTE PELO ID
+    let httpStatus = 200;
+    let resultado = fakeData.find(o => o.id == req.params.id);
+    //VERIFICAR SE HOUVE RESULTADO
+    if(resultado == undefined){
+        httpStatus = 404;
+    }
+    //RETORNAR
+    res.writeHead(httpStatus,{"Content-Type": "application/json"});
+    res.end(JSON.stringify(resultado));
 });
 
 
