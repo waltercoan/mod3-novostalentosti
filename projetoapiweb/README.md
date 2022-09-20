@@ -55,3 +55,13 @@ DICA: Veja a função includes do Javascript
 - HTTP Status Code 400 - Bad Request - se o corpo não possuir um objeto
 - Header Resposta
     - Content-Type = application/json (tipo do informação retornada pela API)
+
+### Endpoint PUT /api/v1/clientes/{id}
+- Verbo PUT do protocolo HTTP
+- Objetivo: recebe no corpo (body) da requisição um objeto, utilizando o parametro id da URL, procurar pelo cliente e então atualizar o cliente com o objeto recebido no corpo do body. 
+- HTTP Status Code 200 - Created
+- HTTP Status Code 400 - Bad Request - se o corpo não possuir um objeto
+- HTTP Status Code 404 - Not found
+- Resposta: o objeto alterado
+- Header Resposta
+    - Content-Type = application/json (tipo do informação retornada pela API)

@@ -48,6 +48,10 @@ app.get("/api/v1/clientes/nome/:nome", (req,res) =>{
     res.end(JSON.stringify(resultado));
 });
 
+app.post("/api/v1/clientes", (req,res)=>{
+    console.log(req.body);
+});
+
 app.listen(3000, () =>{ //CALLBACK
     console.log("Servidor online");
     console.log("http://localhost:3000/");
