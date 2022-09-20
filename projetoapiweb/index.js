@@ -37,7 +37,16 @@ app.get("/api/v1/clientes/:id", (req,res)=>{
     res.end(JSON.stringify(resultado));
 });
 
+app.get("/api/v1/clientes/nome/:nome", (req,res) =>{
+    let httpStatus = 200;
 
+    let resultado = fakeData.find(o => o.nome.includes(req.params.nome));
+    if (resultado == undefined){
+        httpStatus = 404;
+    }
+    res.writeHead(httpStatus,{"Content-Type": "application/json"});
+    res.end(JSON.stringify(resultado));
+});
 
 app.listen(3000, () =>{ //CALLBACK
     console.log("Servidor online");
