@@ -1,5 +1,8 @@
 ### chamada GET para /clientes
 GET http://localhost:3000/api/v1/clientes
 ###
-GET http://localhost:3000/api/v1/clientes/200
+GET http://localhost:3000/api/v1/clientes/999
+###
+
+GET http://localhost:3000/api/v1/clientes/nome/zezinho
 ###

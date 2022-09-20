@@ -37,6 +37,16 @@ Utilizadas para testar a API
 - Header Resposta
     - Content-Type = application/json (tipo do informação retornada pela API)
 
+
+### Endpoint GET /api/v1/clientes/nome/{nome}
+- Verbo GET do protocolo HTTP
+- Objetivo: retornar uma única instância do objeto cliente que contenha no nome o valor informado na URL
+DICA: Veja a função includes do Javascript
+- HTTP Status Code 200 - Sucesso
+- HTTP Status Code 404 - Not Found
+- Header Resposta
+    - Content-Type = application/json (tipo do informação retornada pela API)
+
 ### Endpoint POST /api/v1/clientes
 - Verbo POST do protocolo HTTP
 - Objetivo: recebe no corpo (body) da requisição um objeto e insere na lista de dados
