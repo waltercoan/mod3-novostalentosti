@@ -19,10 +19,15 @@ const fakeData = [
 ];
 //GET /api/v1/clientes - consulta que retorna todos os registros
 app.get("/api/v1/clientes", (req,res) =>{
-    //writeHead 1 define o HTTP Status + headers da resposta
+    //writeHead define o HTTP Status + headers da resposta
     res.writeHead(200,{"Content-Type": "application/json"});
     res.end(JSON.stringify(fakeData));
 });
+
+app.get("/api/v1/clientes/:id", (req,res)=>{
+    console.log(req.params.id);
+});
+
 
 
 app.listen(3000, () =>{ //CALLBACK
