@@ -1,5 +1,8 @@
 const express = require('express');
 const app = express();
+//DICA
+const bodyparser = require('body-parser');
+app.use(bodyparser.json())
 
 const fakeData = [
     {
