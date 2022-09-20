@@ -36,3 +36,12 @@ Utilizadas para testar a API
 - HTTP Status Code 404 - Not Found
 - Header Resposta
     - Content-Type = application/json (tipo do informação retornada pela API)
+
+### Endpoint POST /api/v1/clientes
+- Verbo POST do protocolo HTTP
+- Objetivo: recebe no corpo (body) da requisição um objeto e insere na lista de dados
+- Retorna o objeto inserido no sistema
+- HTTP Status Code 201 - Created
+- HTTP Status Code 400 - Bad Request - se o corpo não possuir um objeto
+- Header Resposta
+    - Content-Type = application/json (tipo do informação retornada pela API)
