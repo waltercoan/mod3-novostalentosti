@@ -82,7 +82,8 @@ app.put("/api/v1/clientes/:id", (req,res) =>{
     if(clienteAnt == undefined){
         httpStatus = 404; //Not found
     }else{
-        if (!clienteAtualizacao.hasOwnProperty('nome')){
+        let campos = ['nome','endereco','sexo','telefone'];
+        if (!Object.keys(clienteAtualizacao).some(o => campos.includes(o))){
             clienteAnt = {};
             httpStatus = 400; //Bad Request
         }else{
