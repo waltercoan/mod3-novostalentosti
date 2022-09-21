@@ -97,6 +97,19 @@ app.put("/api/v1/clientes/:id", (req,res) =>{
     res.end(JSON.stringify(clienteAnt));
 });
 
+app.delete("/api/v1/clientes/:id", (req,res)=>{
+    //Guardo da URL o ID do cliente para remover
+    let idCliente = req.params.id;
+    //Procurar pelo objeto usando o id
+    let clienteExcluir = fakeData.find(o => o.id == idCliente);
+    //Descobrir a posição do objeto dentro do array
+    let posicao = fakeData.indexOf(clienteExcluir);
+    //Mando excluir
+    fakeData.splice(posicao,1);
+    res.writeHead(200,{"Content-Type": "application/json"});
+    res.end(JSON.stringify(clienteExcluir));
+});
+
 app.listen(3000, () =>{ //CALLBACK
     console.log("Servidor online");
     console.log("http://localhost:3000/");
