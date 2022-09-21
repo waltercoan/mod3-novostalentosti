@@ -74,15 +74,25 @@ app.post("/api/v1/clientes", (req,res)=>{
 });
 
 app.put("/api/v1/clientes/:id", (req,res) =>{
+    let httpStatus = 200;
     let idClienteAntigo = req.params.id; //id da URL
     let clienteAtualizacao = req.body;
     let clienteAnt =
         fakeData.find(o => o.id == idClienteAntigo);
-    clienteAnt.nome = clienteAtualizacao.nome;
-    clienteAnt.endereco = clienteAtualizacao.endereco;
-    clienteAnt.sexo = clienteAtualizacao.sexo;
-    clienteAnt.telefone = clienteAtualizacao.telefone;
-    res.writeHead(200,{"Content-Type": "application/json"});
+    if(clienteAnt == undefined){
+        httpStatus = 404; //Not found
+    }else{
+        if (!clienteAtualizacao.hasOwnProperty('nome')){
+            clienteAnt = {};
+            httpStatus = 400; //Bad Request
+        }else{
+            clienteAnt.nome = clienteAtualizacao.nome;
+            clienteAnt.endereco = clienteAtualizacao.endereco;
+            clienteAnt.sexo = clienteAtualizacao.sexo;
+            clienteAnt.telefone = clienteAtualizacao.telefone;
+        }
+    }
+    res.writeHead(httpStatus,{"Content-Type": "application/json"});
     res.end(JSON.stringify(clienteAnt));
 });
 
