@@ -17,3 +17,12 @@ content-type: application/json
     "telefone": "5555-4444"
 }
 ###
+PUT http://localhost:3000/api/v1/clientes/1
+content-type: application/json
+
+{
+    "nome": "Zezinho da Silva",
+    "endereco": "rua lalalala 500",
+    "sexo": "Masculino",
+    "telefone": "5555-6666"
+}

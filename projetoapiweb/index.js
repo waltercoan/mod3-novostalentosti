@@ -73,6 +73,19 @@ app.post("/api/v1/clientes", (req,res)=>{
     res.end(JSON.stringify(novoCliente));
 });
 
+app.put("/api/v1/clientes/:id", (req,res) =>{
+    let idClienteAntigo = req.params.id; //id da URL
+    let clienteAtualizacao = req.body;
+    let clienteAnt =
+        fakeData.find( o => o.id == idClienteAntigo);
+    clienteAnt.nome = clienteAtualizacao.nome;
+    clienteAnt.endereco = clienteAtualizacao.endereco;
+    clienteAnt.sexo = clienteAtualizacao.sexo;
+    clienteAnt.telefone = clienteAtualizacao.telefone;
+    res.writeHead(200,{"Content-Type": "application/json"});
+    res.end(JSON.stringify(clienteAnt));
+});
+
 app.listen(3000, () =>{ //CALLBACK
     console.log("Servidor online");
     console.log("http://localhost:3000/");
