@@ -77,7 +77,7 @@ app.put("/api/v1/clientes/:id", (req,res) =>{
     let idClienteAntigo = req.params.id; //id da URL
     let clienteAtualizacao = req.body;
     let clienteAnt =
-        fakeData.find( o => o.id == idClienteAntigo);
+        fakeData.find(o => o.id == idClienteAntigo);
     clienteAnt.nome = clienteAtualizacao.nome;
     clienteAnt.endereco = clienteAtualizacao.endereco;
     clienteAnt.sexo = clienteAtualizacao.sexo;
